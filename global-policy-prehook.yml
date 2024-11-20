@@ -1,0 +1,19 @@
+global-policy: 1.0.0
+
+info:
+  name: ricky-poc-prehook
+  title: Ricky POC Prehook Policy
+  version: 1.0.0
+
+gateways:
+  - datapower-api-gateway
+
+assembly:
+  execute:
+    - set-variable:
+        version: 2.0.0
+        title: set-variable
+        actions:
+          - set: message.ricky.endpoint
+            value: https://rickymoorhouse.uk/
+            type: string
